@@ -1,0 +1,2702 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/share.service.v1.share/DeleteGameArena": {
+            "get": {
+                "summary": "/share.service.v1.share/DeleteGameArena",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.DeleteGameArenaResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.DeleteGameArenaReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListAdd": {
+            "get": {
+                "summary": "/share.service.v1.share/HListAdd",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListAddLast": {
+            "get": {
+                "summary": "/share.service.v1.share/HListAddLast",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListDel": {
+            "get": {
+                "summary": "/share.service.v1.share/HListDel",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListDelAll": {
+            "get": {
+                "summary": "/share.service.v1.share/HListDelAll",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListLoadAll": {
+            "get": {
+                "summary": "/share.service.v1.share/HListLoadAll",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.HListLoadResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListLoadRange": {
+            "get": {
+                "summary": "/share.service.v1.share/HListLoadRange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.HListLoadResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "From",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "To",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListPopFirst": {
+            "get": {
+                "summary": "/share.service.v1.share/HListPopFirst",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.HListPopResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HListPopLast": {
+            "get": {
+                "summary": "/share.service.v1.share/HListPopLast",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.HListPopResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ListName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetAdd": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetAdd",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.HSetAddReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetDel": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetDel",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetDelHash": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetDelHash",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetDelValues": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetDelValues",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Keys",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetIncr": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetIncr",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.HSetIncrReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetLoad": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetLoad",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.HSetLoadResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetLoadValues": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetLoadValues",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.HSetLoadValuesResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Keys",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetUpdate": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetUpdate",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.HSetUpdateReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/HSetUpdateValues": {
+            "get": {
+                "summary": "/share.service.v1.share/HSetUpdateValues",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.HSetUpdateValuesReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/IncrGameData": {
+            "get": {
+                "summary": "redis",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "GroupId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Value",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ServerId",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/LoadExpire": {
+            "get": {
+                "summary": "/share.service.v1.share/LoadExpire",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.LoadExpireResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/LoadGameAvoidInjury": {
+            "get": {
+                "summary": "/share.service.v1.share/LoadGameAvoidInjury",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.LoadGameAvoidInjuryResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "gameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/LoadGameData": {
+            "get": {
+                "summary": "/share.service.v1.share/LoadGameData",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.LoadGameDataResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "GroupId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "HashName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ServerId",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/LoadShare": {
+            "get": {
+                "summary": "/share.service.v1.share/LoadShare",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.LoadValuesResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameID",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Keys",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/LoadValues": {
+            "get": {
+                "summary": "/share.service.v1.share/LoadValues",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.LoadValuesResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameID",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Keys",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/Ping": {
+            "get": {
+                "summary": "/share.service.v1.share/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetAdd": {
+            "get": {
+                "summary": "/share.service.v1.share/SetAdd",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetDel": {
+            "get": {
+                "summary": "/share.service.v1.share/SetDel",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetDelAll": {
+            "get": {
+                "summary": "/share.service.v1.share/SetDelAll",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetExpire": {
+            "get": {
+                "summary": "/share.service.v1.share/SetExpire",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Time",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetIsMember": {
+            "get": {
+                "summary": "/share.service.v1.share/SetIsMember",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.SetIsMemberResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetMembers": {
+            "get": {
+                "summary": "/share.service.v1.share/SetMembers",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.SetMembersResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Item",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/SetRandom": {
+            "get": {
+                "summary": "/share.service.v1.share/SetRandom",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.SetRandomResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Count",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/UpdateGameArena": {
+            "get": {
+                "summary": "/share.service.v1.share/UpdateGameArena",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.UpdateGameArenaResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.UpdateGameArenaReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/UpdateKeyValues": {
+            "get": {
+                "summary": "/share.service.v1.share/UpdateKeyValues",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.UpdateKeyValuesReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/UpdateShare": {
+            "get": {
+                "summary": "共享数据",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.share.service.v1.UpdateKeyValuesReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetDel": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetDel",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetDelAll": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetDelAll",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetGetRank": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetGetRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.ZSetGetRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetGetRevRank": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetGetRevRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.ZSetGetRankResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetGetScore": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetGetScore",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.ZSetGetScoreResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetLoadRange": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetLoadRange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.ZSetLoadRangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "From",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "To",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetLoadRevRange": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetLoadRevRange",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.ZSetLoadRangeResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "From",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "To",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetRefreshRank": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetRefreshRank",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Delta",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        },
+        "/share.service.v1.share/ZSetUpdateScore": {
+            "get": {
+                "summary": "/share.service.v1.share/ZSetUpdateScore",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.share.service.v1.CommonResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "Score",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "SetName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Key",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "GameId",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "tags": [
+                    "share.service.v1.share"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".share.service.v1.AvoidHurt": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "integer"
+                },
+                "right": {
+                    "type": "integer"
+                },
+                "extra": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.AvoidHurtMap": {
+            "type": "object",
+            "properties": {
+                "gameId": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "desc": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "integer"
+                },
+                "avoidHurtMap": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/.share.service.v1.AvoidHurt"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.CommonResp": {
+            "type": "object",
+            "properties": {},
+            "description": "/////////////////////////////////////////"
+        },
+        ".share.service.v1.DeleteGameArenaReq": {
+            "type": "object",
+            "properties": {
+                "GameArena": {
+                    "$ref": "#/definitions/.share.service.v1.GameArena"
+                }
+            }
+        },
+        ".share.service.v1.DeleteGameArenaResp": {
+            "type": "object",
+            "properties": {}
+        },
+        ".share.service.v1.GameArena": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "GroupId": {
+                    "type": "integer"
+                },
+                "ArenaInfo": {
+                    "type": "string"
+                },
+                "ExtraData": {
+                    "type": "string"
+                },
+                "MatchId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HListLoadRangeReq": {
+            "type": "object",
+            "properties": {
+                "From": {
+                    "type": "integer"
+                },
+                "To": {
+                    "type": "integer"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "ListName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HListLoadResp": {
+            "type": "object",
+            "properties": {
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.HListPopResp": {
+            "type": "object",
+            "properties": {
+                "Value": {
+                    "type": "string"
+                }
+            }
+        },
+        ".share.service.v1.HListReq": {
+            "type": "object",
+            "properties": {
+                "Item": {
+                    "type": "string"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "ListName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            },
+            "description": "list"
+        },
+        ".share.service.v1.HSetAddReq": {
+            "type": "object",
+            "properties": {
+                "Item": {
+                    "$ref": "#/definitions/.share.service.v1.KeyValue"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetDelHashReq": {
+            "type": "object",
+            "properties": {
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetDelReq": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetDelValuesReq": {
+            "type": "object",
+            "properties": {
+                "Keys": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetIncrReq": {
+            "type": "object",
+            "properties": {
+                "Item": {
+                    "$ref": "#/definitions/.share.service.v1.KeyValue"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetLoadReq": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetLoadResp": {
+            "type": "object",
+            "properties": {
+                "Item": {
+                    "$ref": "#/definitions/.share.service.v1.KeyValue"
+                }
+            }
+        },
+        ".share.service.v1.HSetLoadValuesReq": {
+            "type": "object",
+            "properties": {
+                "Keys": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetLoadValuesResp": {
+            "type": "object",
+            "properties": {
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.share.service.v1.KeyValue"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.HSetUpdateReq": {
+            "type": "object",
+            "properties": {
+                "Item": {
+                    "$ref": "#/definitions/.share.service.v1.KeyValue"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.HSetUpdateValuesReq": {
+            "type": "object",
+            "properties": {
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.share.service.v1.KeyValue"
+                    }
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.IncrGameDataReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "GroupId": {
+                    "type": "integer"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "integer"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "ServerId": {
+                    "type": "string"
+                }
+            }
+        },
+        ".share.service.v1.KeyValue": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Key",
+                "value"
+            ]
+        },
+        ".share.service.v1.LoadExpireReq": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                }
+            }
+        },
+        ".share.service.v1.LoadExpireResp": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Time": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.LoadGameAvoidInjuryReq": {
+            "type": "object",
+            "properties": {
+                "gameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.LoadGameAvoidInjuryResp": {
+            "type": "object",
+            "properties": {
+                "proxyMap": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/.share.service.v1.AvoidHurtMap"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.LoadGameDataReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "GroupId": {
+                    "type": "integer"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "ServerId": {
+                    "type": "string"
+                }
+            }
+        },
+        ".share.service.v1.LoadGameDataResp": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "GroupId": {
+                    "type": "integer"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "integer"
+                },
+                "HashName": {
+                    "type": "string"
+                },
+                "ServerId": {
+                    "type": "string"
+                }
+            }
+        },
+        ".share.service.v1.LoadValuesReq": {
+            "type": "object",
+            "properties": {
+                "GameID": {
+                    "type": "integer"
+                },
+                "Keys": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.LoadValuesResp": {
+            "type": "object",
+            "properties": {
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.share.service.v1.KeyValue"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.SetExpireReq": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Time": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.SetIsMemberResp": {
+            "type": "object",
+            "properties": {
+                "IsMember": {
+                    "type": "boolean"
+                }
+            }
+        },
+        ".share.service.v1.SetMembersResp": {
+            "type": "object",
+            "properties": {
+                "Members": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.SetRandomReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "SetName": {
+                    "type": "string"
+                },
+                "Count": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.SetRandomResp": {
+            "type": "object",
+            "properties": {
+                "Members": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.SetReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "SetName": {
+                    "type": "string"
+                },
+                "Item": {
+                    "type": "string"
+                }
+            },
+            "description": "set"
+        },
+        ".share.service.v1.UpdateGameArenaReq": {
+            "type": "object",
+            "properties": {
+                "GameArena": {
+                    "$ref": "#/definitions/.share.service.v1.GameArena"
+                }
+            }
+        },
+        ".share.service.v1.UpdateGameArenaResp": {
+            "type": "object",
+            "properties": {}
+        },
+        ".share.service.v1.UpdateKeyValuesReq": {
+            "type": "object",
+            "properties": {
+                "GameID": {
+                    "type": "integer"
+                },
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.share.service.v1.KeyValue"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.ZSetGetRankResp": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Score": {
+                    "type": "integer"
+                },
+                "Rank": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.ZSetGetScoreResp": {
+            "type": "object",
+            "properties": {
+                "Score": {
+                    "type": "integer"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.ZSetLoadRangeReq": {
+            "type": "object",
+            "properties": {
+                "From": {
+                    "type": "integer"
+                },
+                "To": {
+                    "type": "integer"
+                },
+                "SetName": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            },
+            "description": "zset"
+        },
+        ".share.service.v1.ZSetLoadRangeResp": {
+            "type": "object",
+            "properties": {
+                "Rank": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.share.service.v1.ZSetRangeData"
+                    }
+                }
+            }
+        },
+        ".share.service.v1.ZSetRangeData": {
+            "type": "object",
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Score": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.ZSetRefreshRankReq": {
+            "type": "object",
+            "properties": {
+                "Delta": {
+                    "type": "integer"
+                },
+                "SetName": {
+                    "type": "string"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.ZSetReq": {
+            "type": "object",
+            "properties": {
+                "SetName": {
+                    "type": "string"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".share.service.v1.ZSetUpdateScoreReq": {
+            "type": "object",
+            "properties": {
+                "Score": {
+                    "type": "integer"
+                },
+                "SetName": {
+                    "type": "string"
+                },
+                "Key": {
+                    "type": "string"
+                },
+                "GameId": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

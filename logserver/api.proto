@@ -1,0 +1,63 @@
+// 定义项目 API 的 proto 文件 可以同时描述 gRPC 和 HTTP API
+// protobuf 文件参考:
+//  - https://developers.google.com/protocol-buffers/
+syntax = "proto3";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+// package 命名使用 {appid}.{version} 的方式, version 形如 v1, v2 ..
+package logserver.service.v1;
+
+// NOTE: 最后请删除这些无用的注释 (゜-゜)つロ
+
+option go_package = "api";
+option (gogoproto.goproto_getters_all) = false;
+
+service Logserver {
+    rpc Ping(.google.protobuf.Empty) returns (.google.protobuf.Empty);
+
+	rpc Record(RecordReq) returns (RecordRsp) {
+          option (google.api.http) = {
+              post:"/logserver/Record"
+          };
+     }
+}
+
+message RecordReq{
+    repeated LogMsg Messages = 1;
+}
+
+message RecordRsp{
+}
+
+message LogMsg{
+     LogType LogType = 1;
+     string Json     = 2;
+}
+
+enum LogType{
+     Invalid         = 0;
+     Articles        = 1;
+     GameRecord      = 2;
+     GameUser        = 3;
+     RewardPool      = 4;
+}
+
+
+message LogGameRecord {
+    int32 GameID    = 1;
+	int32 GroupID   = 2;
+	int32 BaseScore = 3;
+}
+
+message LogGameUser  {
+	int64 UserID    = 1;
+	string Name     = 2;
+}
+
+message LogRewardPool{
+    int32 GameId     = 1;
+	int32 GroupId    = 2;
+}

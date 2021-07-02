@@ -1,0 +1,117 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/logserver.service.v1.Logserver/Ping": {
+            "get": {
+                "summary": "/logserver.service.v1.Logserver/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "logserver.service.v1.Logserver"
+                ]
+            }
+        },
+        "/logserver/Record": {
+            "post": {
+                "summary": "/logserver/Record",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.logserver.service.v1.RecordRsp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.logserver.service.v1.RecordReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "logserver.service.v1.Logserver"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".logserver.service.v1.LogMsg": {
+            "type": "object",
+            "properties": {
+                "LogType": {
+                    "type": "integer"
+                },
+                "Json": {
+                    "type": "string"
+                }
+            }
+        },
+        ".logserver.service.v1.RecordReq": {
+            "type": "object",
+            "properties": {
+                "Messages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/.logserver.service.v1.LogMsg"
+                    }
+                }
+            }
+        },
+        ".logserver.service.v1.RecordRsp": {
+            "type": "object",
+            "properties": {}
+        }
+    }
+}
