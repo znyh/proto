@@ -1,4 +1,4 @@
-module github.com/znyh/middle-end/proto
+module github.com/znyh/proto
 
 go 1.13
 
