@@ -1,4 +1,5 @@
 package api
+
 import (
 	"context"
 	"fmt"
@@ -9,7 +10,7 @@ import (
 )
 
 // AppID .
-const AppID = "TODO: ADD APP ID"
+const AppID = "logwrieter-service"
 
 // NewClient new grpc client
 func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (LogwriterClient, error) {
