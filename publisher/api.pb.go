@@ -34,24 +34,21 @@ const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 type KafkaSubEvent int32
 
 const (
-	KafkaSubEvent_Nothing       KafkaSubEvent = 0
-	KafkaSubEvent_Push          KafkaSubEvent = 1
-	KafkaSubEvent_Sub           KafkaSubEvent = 2
-	KafkaSubEvent_LogServerPush KafkaSubEvent = 3
+	KafkaSubEvent_Nothing KafkaSubEvent = 0
+	KafkaSubEvent_Push    KafkaSubEvent = 1
+	KafkaSubEvent_Sub     KafkaSubEvent = 2
 )
 
 var KafkaSubEvent_name = map[int32]string{
 	0: "Nothing",
 	1: "Push",
 	2: "Sub",
-	3: "LogServerPush",
 }
 
 var KafkaSubEvent_value = map[string]int32{
-	"Nothing":       0,
-	"Push":          1,
-	"Sub":           2,
-	"LogServerPush": 3,
+	"Nothing": 0,
+	"Push":    1,
+	"Sub":     2,
 }
 
 func (x KafkaSubEvent) String() string {
@@ -60,40 +57,6 @@ func (x KafkaSubEvent) String() string {
 
 func (KafkaSubEvent) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_00212fb1f9d3bf1c, []int{0}
-}
-
-type LogType int32
-
-const (
-	LogType_Invalid    LogType = 0
-	LogType_Articles   LogType = 1
-	LogType_GameRecord LogType = 2
-	LogType_GameUser   LogType = 3
-	LogType_RewardPool LogType = 4
-)
-
-var LogType_name = map[int32]string{
-	0: "Invalid",
-	1: "Articles",
-	2: "GameRecord",
-	3: "GameUser",
-	4: "RewardPool",
-}
-
-var LogType_value = map[string]int32{
-	"Invalid":    0,
-	"Articles":   1,
-	"GameRecord": 2,
-	"GameUser":   3,
-	"RewardPool": 4,
-}
-
-func (x LogType) String() string {
-	return proto.EnumName(LogType_name, int32(x))
-}
-
-func (LogType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{1}
 }
 
 type Message struct {
@@ -138,172 +101,34 @@ func (m *Message) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Message proto.InternalMessageInfo
 
-type LogGameUser struct {
-	Id                   int64    `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
-	Name                 string   `protobuf:"bytes,2,opt,name=Name,proto3" json:"Name,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *LogGameUser) Reset()         { *m = LogGameUser{} }
-func (m *LogGameUser) String() string { return proto.CompactTextString(m) }
-func (*LogGameUser) ProtoMessage()    {}
-func (*LogGameUser) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{1}
-}
-func (m *LogGameUser) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *LogGameUser) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_LogGameUser.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalToSizedBuffer(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (m *LogGameUser) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LogGameUser.Merge(m, src)
-}
-func (m *LogGameUser) XXX_Size() int {
-	return m.Size()
-}
-func (m *LogGameUser) XXX_DiscardUnknown() {
-	xxx_messageInfo_LogGameUser.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_LogGameUser proto.InternalMessageInfo
-
-type LogGameRecord struct {
-	GameID               int32    `protobuf:"varint,1,opt,name=GameID,proto3" json:"GameID,omitempty"`
-	GroupID              int32    `protobuf:"varint,2,opt,name=GroupID,proto3" json:"GroupID,omitempty"`
-	BaseScore            int32    `protobuf:"varint,3,opt,name=BaseScore,proto3" json:"BaseScore,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *LogGameRecord) Reset()         { *m = LogGameRecord{} }
-func (m *LogGameRecord) String() string { return proto.CompactTextString(m) }
-func (*LogGameRecord) ProtoMessage()    {}
-func (*LogGameRecord) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{2}
-}
-func (m *LogGameRecord) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *LogGameRecord) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_LogGameRecord.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalToSizedBuffer(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (m *LogGameRecord) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LogGameRecord.Merge(m, src)
-}
-func (m *LogGameRecord) XXX_Size() int {
-	return m.Size()
-}
-func (m *LogGameRecord) XXX_DiscardUnknown() {
-	xxx_messageInfo_LogGameRecord.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_LogGameRecord proto.InternalMessageInfo
-
-type LogRewardPool struct {
-	GameId               int32    `protobuf:"varint,1,opt,name=GameId,proto3" json:"GameId,omitempty"`
-	GroupId              int32    `protobuf:"varint,2,opt,name=GroupId,proto3" json:"GroupId,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *LogRewardPool) Reset()         { *m = LogRewardPool{} }
-func (m *LogRewardPool) String() string { return proto.CompactTextString(m) }
-func (*LogRewardPool) ProtoMessage()    {}
-func (*LogRewardPool) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{3}
-}
-func (m *LogRewardPool) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *LogRewardPool) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_LogRewardPool.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalToSizedBuffer(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (m *LogRewardPool) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LogRewardPool.Merge(m, src)
-}
-func (m *LogRewardPool) XXX_Size() int {
-	return m.Size()
-}
-func (m *LogRewardPool) XXX_DiscardUnknown() {
-	xxx_messageInfo_LogRewardPool.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_LogRewardPool proto.InternalMessageInfo
-
 func init() {
 	proto.RegisterEnum("publisher.service.v1.KafkaSubEvent", KafkaSubEvent_name, KafkaSubEvent_value)
-	proto.RegisterEnum("publisher.service.v1.LogType", LogType_name, LogType_value)
 	proto.RegisterType((*Message)(nil), "publisher.service.v1.Message")
-	proto.RegisterType((*LogGameUser)(nil), "publisher.service.v1.LogGameUser")
-	proto.RegisterType((*LogGameRecord)(nil), "publisher.service.v1.LogGameRecord")
-	proto.RegisterType((*LogRewardPool)(nil), "publisher.service.v1.LogRewardPool")
 }
 
 func init() { proto.RegisterFile("api.proto", fileDescriptor_00212fb1f9d3bf1c) }
 
 var fileDescriptor_00212fb1f9d3bf1c = []byte{
-	// 459 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x52, 0x4d, 0x6f, 0xd3, 0x40,
-	0x10, 0x8d, 0xed, 0xa4, 0x4e, 0xa6, 0x1f, 0x98, 0x15, 0xaa, 0x42, 0xa8, 0xac, 0x28, 0xa7, 0xa8,
-	0x12, 0x8e, 0x0a, 0x12, 0xf7, 0x46, 0xa9, 0x2a, 0x8b, 0x52, 0x2c, 0x07, 0x2e, 0x5c, 0xd0, 0xda,
-	0x9e, 0x6e, 0x56, 0x75, 0xbc, 0xd6, 0xae, 0x6d, 0x94, 0x7f, 0xc2, 0x4f, 0xea, 0x91, 0x9f, 0x00,
-	0xe1, 0x8f, 0x20, 0x6f, 0x9c, 0x58, 0x3d, 0x70, 0x7b, 0x6f, 0xdf, 0xbc, 0x79, 0xe3, 0xf1, 0xc0,
-	0x80, 0xe6, 0xdc, 0xcb, 0xa5, 0x28, 0x04, 0x79, 0x95, 0x97, 0x51, 0xca, 0xd5, 0x0a, 0xa5, 0xa7,
-	0x50, 0x56, 0x3c, 0x46, 0xaf, 0xba, 0x1a, 0xbd, 0x65, 0xbc, 0x58, 0x95, 0x91, 0x17, 0x8b, 0xf5,
-	0x8c, 0x09, 0x26, 0x66, 0xba, 0x38, 0x2a, 0x1f, 0x34, 0xd3, 0x44, 0xa3, 0x5d, 0x93, 0xd1, 0x1b,
-	0x26, 0x04, 0x4b, 0xb1, 0xad, 0xc2, 0x75, 0x5e, 0x6c, 0x1a, 0xf1, 0xa2, 0x11, 0x69, 0xce, 0x67,
-	0x34, 0xcb, 0x44, 0x41, 0x0b, 0x2e, 0x32, 0xb5, 0x53, 0x27, 0x1f, 0xc1, 0xfe, 0x84, 0x4a, 0x51,
-	0x86, 0x64, 0x04, 0xfd, 0x20, 0xa5, 0x1b, 0x94, 0x7e, 0x32, 0x34, 0xc6, 0xc6, 0xd4, 0x0a, 0x0f,
-	0x9c, 0x38, 0x60, 0x7d, 0xce, 0xd5, 0xd0, 0x1c, 0x1b, 0xd3, 0x5e, 0x58, 0x43, 0x42, 0xa0, 0xbb,
-	0xa0, 0x05, 0x1d, 0x5a, 0x63, 0x63, 0x7a, 0x12, 0x6a, 0x3c, 0xb9, 0x82, 0xe3, 0x3b, 0xc1, 0x6e,
-	0xe9, 0x1a, 0xbf, 0x2a, 0x94, 0xe4, 0x0c, 0xcc, 0x43, 0x2b, 0xd3, 0x4f, 0x6a, 0xcb, 0x3d, 0x5d,
-	0xa3, 0xee, 0x32, 0x08, 0x35, 0x9e, 0x7c, 0x87, 0xd3, 0xc6, 0x12, 0x62, 0x2c, 0x64, 0x42, 0xce,
-	0xe1, 0xa8, 0x66, 0xfe, 0x42, 0x1b, 0x7b, 0x61, 0xc3, 0xc8, 0x10, 0xec, 0x5b, 0x29, 0xca, 0xdc,
-	0x5f, 0x34, 0x53, 0xec, 0x29, 0xb9, 0x80, 0xc1, 0x9c, 0x2a, 0x5c, 0xc6, 0x42, 0xa2, 0x1e, 0xa7,
-	0x17, 0xb6, 0x0f, 0x93, 0x6b, 0x1d, 0x10, 0xe2, 0x0f, 0x2a, 0x93, 0x40, 0x88, 0xf4, 0x10, 0x90,
-	0x3c, 0x0b, 0x48, 0xda, 0x80, 0xe4, 0x79, 0x40, 0x72, 0x39, 0x87, 0xd3, 0x47, 0xfa, 0xf0, 0x48,
-	0x97, 0x65, 0x74, 0x53, 0x61, 0x56, 0x90, 0x63, 0xb0, 0xef, 0x45, 0xb1, 0xe2, 0x19, 0x73, 0x3a,
-	0xa4, 0x0f, 0xdd, 0xa0, 0x54, 0x2b, 0xc7, 0x20, 0x36, 0x58, 0xcb, 0x32, 0x72, 0x4c, 0xf2, 0x52,
-	0x67, 0x2e, 0x51, 0x56, 0x28, 0xb5, 0x66, 0x5d, 0x86, 0x60, 0xdf, 0x09, 0xf6, 0x65, 0x93, 0x63,
-	0xed, 0xf6, 0xb3, 0x8a, 0xa6, 0x3c, 0x71, 0x3a, 0xe4, 0x04, 0xfa, 0xd7, 0xb2, 0xe0, 0x71, 0x8a,
-	0xca, 0x31, 0xc8, 0x19, 0x40, 0xbb, 0x0a, 0xc7, 0xac, 0xd5, 0xfd, 0x36, 0x1d, 0xab, 0x56, 0xdb,
-	0xef, 0x70, 0xba, 0xef, 0x7c, 0x78, 0x11, 0xec, 0xaf, 0x47, 0xe9, 0x30, 0xf2, 0x01, 0xba, 0x01,
-	0xcf, 0x18, 0x39, 0xf7, 0x76, 0x7f, 0xdd, 0xdb, 0x9f, 0x84, 0x77, 0x53, 0x9f, 0xc4, 0xe8, 0x3f,
-	0xef, 0xf3, 0xd7, 0x4f, 0x7f, 0xdc, 0xce, 0xd3, 0xd6, 0x35, 0x7e, 0x6d, 0x5d, 0xe3, 0xf7, 0xd6,
-	0x35, 0x7e, 0xfe, 0x75, 0x3b, 0xdf, 0x2c, 0x9a, 0xf3, 0xe8, 0x48, 0x97, 0xbe, 0xff, 0x17, 0x00,
-	0x00, 0xff, 0xff, 0xcd, 0xe4, 0x52, 0x7f, 0xb5, 0x02, 0x00, 0x00,
+	// 296 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x8f, 0xc1, 0x4a, 0xc3, 0x30,
+	0x1c, 0xc6, 0x97, 0x75, 0xba, 0x19, 0x15, 0x4b, 0x10, 0x99, 0x55, 0xca, 0xf0, 0x34, 0x04, 0x53,
+	0x54, 0xf0, 0x01, 0xc4, 0x1d, 0x86, 0xa8, 0x65, 0xbb, 0x79, 0x4b, 0x66, 0x96, 0x86, 0x75, 0x49,
+	0x68, 0x92, 0xc2, 0xde, 0xc4, 0x47, 0xda, 0xd1, 0x47, 0xd0, 0xfa, 0x22, 0xd2, 0x74, 0xd3, 0x93,
+	0xb7, 0xef, 0xcb, 0xf7, 0x23, 0xfc, 0x7f, 0x70, 0x8f, 0x68, 0x81, 0x75, 0xa1, 0xac, 0x42, 0xc7,
+	0xda, 0xd1, 0x5c, 0x98, 0x8c, 0x15, 0xd8, 0xb0, 0xa2, 0x14, 0x33, 0x86, 0xcb, 0xeb, 0xe8, 0x8a,
+	0x0b, 0x9b, 0x39, 0x8a, 0x67, 0x6a, 0x99, 0x70, 0xc5, 0x55, 0xe2, 0x61, 0xea, 0xe6, 0xbe, 0xf9,
+	0xe2, 0x53, 0xf3, 0x49, 0x74, 0xc6, 0x95, 0xe2, 0x39, 0xfb, 0xa3, 0xd8, 0x52, 0xdb, 0xd5, 0x66,
+	0x3c, 0xdf, 0x8c, 0x44, 0x8b, 0x84, 0x48, 0xa9, 0x2c, 0xb1, 0x42, 0x49, 0xd3, 0xac, 0x17, 0x8f,
+	0xb0, 0xfb, 0xc4, 0x8c, 0x21, 0x9c, 0xa1, 0x08, 0xf6, 0xd2, 0x9c, 0xac, 0x58, 0x31, 0x7e, 0xeb,
+	0x83, 0x01, 0x18, 0x06, 0x93, 0xdf, 0x8e, 0x42, 0x18, 0xbc, 0x68, 0xd3, 0x6f, 0x0f, 0xc0, 0x70,
+	0x67, 0x52, 0x47, 0x84, 0x60, 0xe7, 0x81, 0x58, 0xd2, 0x0f, 0x06, 0x60, 0x78, 0x30, 0xf1, 0xf9,
+	0x32, 0x81, 0x87, 0x0b, 0x32, 0x5f, 0x90, 0xa9, 0xa3, 0xa3, 0x92, 0x49, 0x8b, 0xf6, 0x61, 0xf7,
+	0x59, 0xd9, 0x4c, 0x48, 0x1e, 0xb6, 0x50, 0x0f, 0x76, 0x52, 0x67, 0xb2, 0x10, 0xa0, 0x2e, 0x0c,
+	0xa6, 0x8e, 0x86, 0xed, 0x9b, 0x31, 0x3c, 0x4a, 0xb7, 0xfe, 0xb5, 0x3e, 0x2b, 0xd0, 0x1d, 0xec,
+	0xa4, 0x42, 0x72, 0x74, 0x82, 0x9b, 0xbb, 0xf1, 0x56, 0x0a, 0x8f, 0x6a, 0xa9, 0xe8, 0x9f, 0xf7,
+	0xfb, 0xd3, 0xf5, 0x57, 0xdc, 0x5a, 0x57, 0x31, 0xf8, 0xa8, 0x62, 0xf0, 0x59, 0xc5, 0xe0, 0xfd,
+	0x3b, 0x6e, 0xbd, 0x06, 0x44, 0x0b, 0xba, 0xeb, 0xd1, 0xdb, 0x9f, 0x00, 0x00, 0x00, 0xff, 0xff,
+	0x38, 0x08, 0x14, 0x95, 0x77, 0x01, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -430,124 +255,6 @@ func (m *Message) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	return len(dAtA) - i, nil
 }
 
-func (m *LogGameUser) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalToSizedBuffer(dAtA[:size])
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *LogGameUser) MarshalTo(dAtA []byte) (int, error) {
-	size := m.Size()
-	return m.MarshalToSizedBuffer(dAtA[:size])
-}
-
-func (m *LogGameUser) MarshalToSizedBuffer(dAtA []byte) (int, error) {
-	i := len(dAtA)
-	_ = i
-	var l int
-	_ = l
-	if m.XXX_unrecognized != nil {
-		i -= len(m.XXX_unrecognized)
-		copy(dAtA[i:], m.XXX_unrecognized)
-	}
-	if len(m.Name) > 0 {
-		i -= len(m.Name)
-		copy(dAtA[i:], m.Name)
-		i = encodeVarintApi(dAtA, i, uint64(len(m.Name)))
-		i--
-		dAtA[i] = 0x12
-	}
-	if m.Id != 0 {
-		i = encodeVarintApi(dAtA, i, uint64(m.Id))
-		i--
-		dAtA[i] = 0x8
-	}
-	return len(dAtA) - i, nil
-}
-
-func (m *LogGameRecord) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalToSizedBuffer(dAtA[:size])
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *LogGameRecord) MarshalTo(dAtA []byte) (int, error) {
-	size := m.Size()
-	return m.MarshalToSizedBuffer(dAtA[:size])
-}
-
-func (m *LogGameRecord) MarshalToSizedBuffer(dAtA []byte) (int, error) {
-	i := len(dAtA)
-	_ = i
-	var l int
-	_ = l
-	if m.XXX_unrecognized != nil {
-		i -= len(m.XXX_unrecognized)
-		copy(dAtA[i:], m.XXX_unrecognized)
-	}
-	if m.BaseScore != 0 {
-		i = encodeVarintApi(dAtA, i, uint64(m.BaseScore))
-		i--
-		dAtA[i] = 0x18
-	}
-	if m.GroupID != 0 {
-		i = encodeVarintApi(dAtA, i, uint64(m.GroupID))
-		i--
-		dAtA[i] = 0x10
-	}
-	if m.GameID != 0 {
-		i = encodeVarintApi(dAtA, i, uint64(m.GameID))
-		i--
-		dAtA[i] = 0x8
-	}
-	return len(dAtA) - i, nil
-}
-
-func (m *LogRewardPool) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalToSizedBuffer(dAtA[:size])
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *LogRewardPool) MarshalTo(dAtA []byte) (int, error) {
-	size := m.Size()
-	return m.MarshalToSizedBuffer(dAtA[:size])
-}
-
-func (m *LogRewardPool) MarshalToSizedBuffer(dAtA []byte) (int, error) {
-	i := len(dAtA)
-	_ = i
-	var l int
-	_ = l
-	if m.XXX_unrecognized != nil {
-		i -= len(m.XXX_unrecognized)
-		copy(dAtA[i:], m.XXX_unrecognized)
-	}
-	if m.GroupId != 0 {
-		i = encodeVarintApi(dAtA, i, uint64(m.GroupId))
-		i--
-		dAtA[i] = 0x10
-	}
-	if m.GameId != 0 {
-		i = encodeVarintApi(dAtA, i, uint64(m.GameId))
-		i--
-		dAtA[i] = 0x8
-	}
-	return len(dAtA) - i, nil
-}
-
 func encodeVarintApi(dAtA []byte, offset int, v uint64) int {
 	offset -= sovApi(v)
 	base := offset
@@ -574,64 +281,6 @@ func (m *Message) Size() (n int) {
 	l = len(m.Data)
 	if l > 0 {
 		n += 1 + l + sovApi(uint64(l))
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *LogGameUser) Size() (n int) {
-	if m == nil {
-		return 0
-	}
-	var l int
-	_ = l
-	if m.Id != 0 {
-		n += 1 + sovApi(uint64(m.Id))
-	}
-	l = len(m.Name)
-	if l > 0 {
-		n += 1 + l + sovApi(uint64(l))
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *LogGameRecord) Size() (n int) {
-	if m == nil {
-		return 0
-	}
-	var l int
-	_ = l
-	if m.GameID != 0 {
-		n += 1 + sovApi(uint64(m.GameID))
-	}
-	if m.GroupID != 0 {
-		n += 1 + sovApi(uint64(m.GroupID))
-	}
-	if m.BaseScore != 0 {
-		n += 1 + sovApi(uint64(m.BaseScore))
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *LogRewardPool) Size() (n int) {
-	if m == nil {
-		return 0
-	}
-	var l int
-	_ = l
-	if m.GameId != 0 {
-		n += 1 + sovApi(uint64(m.GameId))
-	}
-	if m.GroupId != 0 {
-		n += 1 + sovApi(uint64(m.GroupId))
 	}
 	if m.XXX_unrecognized != nil {
 		n += len(m.XXX_unrecognized)
@@ -746,305 +395,6 @@ func (m *Message) Unmarshal(dAtA []byte) error {
 				m.Data = []byte{}
 			}
 			iNdEx = postIndex
-		default:
-			iNdEx = preIndex
-			skippy, err := skipApi(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if (skippy < 0) || (iNdEx+skippy) < 0 {
-				return ErrInvalidLengthApi
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *LogGameUser) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowApi
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= uint64(b&0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: LogGameUser: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: LogGameUser: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Id", wireType)
-			}
-			m.Id = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.Id |= int64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 2:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Name", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				stringLen |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			intStringLen := int(stringLen)
-			if intStringLen < 0 {
-				return ErrInvalidLengthApi
-			}
-			postIndex := iNdEx + intStringLen
-			if postIndex < 0 {
-				return ErrInvalidLengthApi
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Name = string(dAtA[iNdEx:postIndex])
-			iNdEx = postIndex
-		default:
-			iNdEx = preIndex
-			skippy, err := skipApi(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if (skippy < 0) || (iNdEx+skippy) < 0 {
-				return ErrInvalidLengthApi
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *LogGameRecord) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowApi
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= uint64(b&0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: LogGameRecord: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: LogGameRecord: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field GameID", wireType)
-			}
-			m.GameID = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.GameID |= int32(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 2:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field GroupID", wireType)
-			}
-			m.GroupID = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.GroupID |= int32(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 3:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field BaseScore", wireType)
-			}
-			m.BaseScore = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.BaseScore |= int32(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		default:
-			iNdEx = preIndex
-			skippy, err := skipApi(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if (skippy < 0) || (iNdEx+skippy) < 0 {
-				return ErrInvalidLengthApi
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *LogRewardPool) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowApi
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= uint64(b&0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: LogRewardPool: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: LogRewardPool: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field GameId", wireType)
-			}
-			m.GameId = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.GameId |= int32(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 2:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field GroupId", wireType)
-			}
-			m.GroupId = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowApi
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.GroupId |= int32(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
 		default:
 			iNdEx = preIndex
 			skippy, err := skipApi(dAtA[iNdEx:])

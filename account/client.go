@@ -10,7 +10,7 @@ import (
 )
 
 // AppID .
-const AppID = "TODO: ADD APP ID"
+const AppID = "account-service"
 
 // NewClient new grpc client
 func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (AccountClient, error) {

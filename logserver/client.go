@@ -12,7 +12,7 @@ import (
 const LogServerTopic = "logServerTopic"
 
 // AppID .
-const AppID = "TODO: ADD APP ID"
+const AppID = "logserver-service"
 
 // NewClient new grpc client
 func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (LogserverClient, error) {
