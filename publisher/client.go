@@ -9,19 +9,17 @@ import (
 	"google.golang.org/grpc"
 )
 
-const LogServerTopic = "logServerTopic"
-
 // AppID .
 const AppID = "TODO: ADD APP ID"
 
 // NewClient new grpc client
-func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (LogserverClient, error) {
+func NewClient(cfg *warden.ClientConfig, opts ...grpc.DialOption) (PublisherserverClient, error) {
 	client := warden.NewClient(cfg, opts...)
 	cc, err := client.Dial(context.Background(), fmt.Sprintf("discovery://default/%s", AppID))
 	if err != nil {
 		return nil, err
 	}
-	return NewLogserverClient(cc), nil
+	return NewPublisherserverClient(cc), nil
 }
 
 // 生成 gRPC 代码

@@ -1,0 +1,459 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api.proto",
+        "version": "1"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/world.service.v1.world/Ping": {
+            "get": {
+                "summary": "/world.service.v1.world/Ping",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world.service.v1.world/SayHello": {
+            "get": {
+                "summary": "/world.service.v1.world/SayHello",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.google.protobuf.Empty"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world/OnApplyCustomRoomNum": {
+            "post": {
+                "summary": "/world/OnApplyCustomRoomNum",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.world.service.v1.ApplyCustomRoomNumRsp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.world.service.v1.ApplyCustomRoomNumReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world/OnDisbandCustomRoomNum": {
+            "post": {
+                "summary": "/world/OnDisbandCustomRoomNum",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.world.service.v1.DisbandCustomRoomRsp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.world.service.v1.DisbandCustomRoomReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world/OnGenerateRoomNums": {
+            "post": {
+                "summary": "room Number generate",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.world.service.v1.GenerateRoomNumsRsp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.world.service.v1.GenerateRoomNumsReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world/OnMysqlDemo": {
+            "post": {
+                "summary": "/world/OnMysqlDemo",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.world.service.v1.MysqlDemoResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.world.service.v1.MysqlDemoReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world/OnRedisDemo": {
+            "post": {
+                "summary": "/world/OnRedisDemo",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.world.service.v1.RedisDemoResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.world.service.v1.RedisDemoReq"
+                        }
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        },
+        "/world/say_hello": {
+            "get": {
+                "summary": "/world/say_hello",
+                "responses": {
+                    "200": {
+                        "description": "A successful response.",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/.world.service.v1.HelloResp"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "world.service.v1.world"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        ".google.protobuf.Empty": {
+            "type": "object",
+            "properties": {},
+            "description": "A generic empty message that you can re-use to avoid defining duplicated\n empty messages in your APIs. A typical example is to use it as the request\n or the response type of an API method. For instance:\n\n     service Foo {\n       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n     }\n\n The JSON representation for `Empty` is empty JSON object `{}`."
+        },
+        ".world.service.v1.ApplyCustomRoomNumReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "GameId"
+            ]
+        },
+        ".world.service.v1.ApplyCustomRoomNumRsp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Message": {
+                    "type": "string"
+                },
+                "RoomNum": {
+                    "type": "integer"
+                },
+                "RoomNo": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".world.service.v1.DisbandCustomRoomReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "RoomNum": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "GameId",
+                "RoomNum"
+            ]
+        },
+        ".world.service.v1.DisbandCustomRoomRsp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Message": {
+                    "type": "string"
+                },
+                "UserId": {
+                    "type": "integer"
+                }
+            }
+        },
+        ".world.service.v1.GenerateRoomNumsReq": {
+            "type": "object",
+            "properties": {
+                "GameId": {
+                    "type": "integer"
+                },
+                "FromId": {
+                    "type": "integer"
+                },
+                "ToId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "GameId",
+                "FromId",
+                "ToId"
+            ]
+        },
+        ".world.service.v1.GenerateRoomNumsRsp": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "integer"
+                },
+                "Content": {
+                    "type": "string"
+                }
+            }
+        },
+        ".world.service.v1.HelloReq": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        ".world.service.v1.HelloResp": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "type": "string"
+                }
+            }
+        },
+        ".world.service.v1.MysqlDemoReq": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        ".world.service.v1.MysqlDemoResp": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        ".world.service.v1.RedisDemoReq": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            }
+        },
+        ".world.service.v1.RedisDemoResp": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
